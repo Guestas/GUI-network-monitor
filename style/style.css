@@ -122,13 +122,13 @@
     }
 
     .topLog{
-      border-top: 1px solid rgb(255, 255, 255);
+      border-top: 0px solid rgb(255, 255, 255);
       padding-top: 7px;
       border-radius: 60px;
 
     }
     .botomLog{
-      border-bottom: 1px solid rgb(255, 255, 255);
+      border-bottom: 0px solid rgb(255, 255, 255);
       padding-bottom: 7px;
       border-radius: 60px;
     }
