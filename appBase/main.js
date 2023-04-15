@@ -5,7 +5,7 @@ const axios = require('axios').default;
 const https = require('https');
 const { autoUpdater, AppUpdater } = require("electron-updater");
 
-var dev = false//dev if true open dev mode and auto fill forms
+var dev = true//dev if true open dev mode and auto fill forms
 let mainWindow
 
 var httpReqestAddr
@@ -137,7 +137,7 @@ function createWindow () {
     });
   }
   Menu.setApplicationMenu(Menu.buildFromTemplate(menu))//nastavení položek v menu
-  mainWindow.loadFile('index.html')         //načte html soubor
+  mainWindow.loadFile(path.join(__dirname, 'index.html'))         //načte html soubor
   if(dev){
     mainWindow.webContents.openDevTools()   //otevře vývojářské nástroje při spuštění
   }

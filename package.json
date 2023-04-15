@@ -2,7 +2,7 @@
   "name": "Network-monitor",
   "version": "2.1.0",
   "description": "GUI for api app",
-  "main": "main.js",
+  "main": "appBase/main.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,12 +16,7 @@
     "Network application"
   ],
   "files": [
-    "index.html",
-    "main.js",
-    "preload.js",
-    "settings.json",
-    "pics/**/*",
-    "certif/**/*"
+    "appBase/**/*"
   ],
   "repository": "https://github.com/Guestas/GUI-network-monitor",
   "publish": {
