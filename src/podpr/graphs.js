@@ -493,6 +493,8 @@ function progress(progressStatus){
 
 
 function dataForGraphsT(dtf = 0, dtt=Date.now(), step = "s", firsLoad = true, auto = true){//write to line graph and get data for other graphs setting it to json from first graph
+  var toggle = true
+  myCheckbox.checked == true ? myCheckbox.checked = false:toggle = false
   var chartData = [], labels = [], newWal = true, i = 0, stts = 0
   ttt = Date.now()
   statusBar.style.height = "17%"
@@ -608,7 +610,10 @@ function dataForGraphsT(dtf = 0, dtt=Date.now(), step = "s", firsLoad = true, au
         progress(100)
         setTimeout(function() {
           statusBar.style.height = "0px"
+          myCheckbox.checked = toggle
+          t=refreshTime
         }, 700);
+
     })
   })
   
