@@ -1,5 +1,4 @@
     body{
-        text-align: center;
         background-color: rgb(56, 54, 68);
         color: #ffffff;
         font-family: Arial, Helvetica, sans-serif;
@@ -11,7 +10,6 @@
         margin-bottom: 0px;
         margin-top: 1px;
         outline: none;
-        text-align: center;
     }
 
     button{
@@ -137,6 +135,33 @@
   }
 
   img{
-    cursor: pointer;
+    height: 60px;
+    
+  }
+  #kk {
+    margin-left: 60px;
+    text-align: left;
+    transition: 0.3s;
   }
   
+
+  a:hover {
+    color: #7f7e7e;
+  }
+
+  .dow {
+    width: 300px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+  }
