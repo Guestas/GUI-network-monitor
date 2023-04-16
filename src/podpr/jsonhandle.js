@@ -138,8 +138,8 @@ update.addEventListener('click', async () => {  //update/save
   loadAllDataNew(); //v graphs.js obnoví změny aby byli při překliknutí ihned viditelné
   updateMapPoints(); //v maps.js obnoví body v mapě
 })
-function dellAdress(Dname){
 
+function dellAdress(Dname){
   l_na = []
   l_ad = []
   canc = false
@@ -241,7 +241,7 @@ paus.addEventListener('click', async () => {
 })
 
 
-window.api.receive_cmd("fromMainhowHideSwitch", () => {
+window.api.receive_cmd("fromMainhowSave", () => {
   console.log(tasks_raw_data)
   window.api.send("toMainJsonSave",tasks_raw_data)
 });

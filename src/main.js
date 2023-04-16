@@ -59,7 +59,7 @@ function createWindow () {
         label: 'File',
         submenu: [
           { label: 'Load file', click: () => handleFileOpen() },
-          { label: 'Save', click: () => mainWindow.webContents.send("fromMainhowHideSwitch") },
+          { label: 'Save', click: () => mainWindow.webContents.send("fromMainhowSave") },
         ]
       },
       // { role: 'editMenu' }
@@ -287,7 +287,7 @@ async function handleFileOpen() {
 
 function getAccessToken(username, password, addr) {
   post_log = ""
-  if (addr){
+  if (addr != ""){
     axiosInst.defaults.baseURL = addr;
   }
   else{
@@ -361,7 +361,8 @@ app.whenReady().then(() => {
   mainWindow.on('resize', () => {
     const [width, height] = mainWindow.getSize();
     if (height !== Math.round(width * 9 / 16)) {
-      mainWindow.setSize(width, Math.round(width * 9 / 16));
+      //nastavení výšky a šířky okna na poměr stran 16:9
+      mainWindow.setSize(width, Math.round(width * 9 / 16)); 
     }
   });
 

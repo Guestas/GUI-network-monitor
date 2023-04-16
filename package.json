@@ -42,7 +42,7 @@
     }
   },
   "author": "Martin Cé",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^20.1.0",
     "electron-builder": "^23.6.0"

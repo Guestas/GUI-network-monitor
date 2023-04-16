@@ -4,12 +4,38 @@
     <meta charset="UTF-8" http-equiv="Content-Security-Policy"
     content="default-src 'self'; img-src https://* file://* data:; child-src 'none';">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-
+     <link rel="stylesheet" href="style.css" />
     
     <title>Network monitor</title>
   </head>
   <body>
    <h1>Hello</h1>
+   <div class="sidebarr">
+    <a href="#" class="closebtn" id="openNav">&#9776;</a>
+    <a href="#" id="s0" class="swapPageS"><img src="pics/login.png" height="20px"></a>
+    <hr>
+    <a href="#" id="s1" class="swapPageS"><img src="pics/change.png" height="20px"></a> 
+    <hr>
+    <a href="#" id="s2" class="swapPageS"><img src="pics/line.png" height="20px"></a>
+    <a href="#" id="s3" class="swapPageS"><img src="pics/bar.png" height="20px"></a>
+    <a href="#" id="s4" class="swapPageS"><img src="pics/Polar.png" height="20px"></a>
+    <hr>
+    <a href="#" id="s5" class="swapPageS"><img src="pics/Map.png" height="20px"></a>
+  </div>
 
+  <div id="mySidenav" class="sidenav">
+    <a href="#" class="closebtn" id="closebtn">&times;</a>
+    <a href="#" id="s0" class="swapPage"><img class="icons" src="pics/login.png" height="20px">Login</a>
+    <hr>
+    <a href="#" id="s1" class="swapPage"><img class="icons" src="pics/change.png" height="20px">Data update</a> 
+    <hr>
+    <a href="#" id="s2" class="swapPage"><img class="icons" src="pics/line.png" height="20px"> Graph responses</a>
+    <a href="#" id="s3" class="swapPage"><img class="icons" src="pics/bar.png" height="20px"> Graph errors</a>
+    <a href="#" id="s4" class="swapPage"><img class="icons" src="pics/Polar.png" height="20px"> Graph average</a>
+    <hr>
+    <a href="#" id="s5" class="swapPage"><img class="icons" src="pics/Map.png" height="20px"> Map</a>
+  </div>
+  
+  <div id="hider"></div>
   </body>
 </html>

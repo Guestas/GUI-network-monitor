@@ -2,9 +2,7 @@ const {
     contextBridge,
     ipcRenderer
 } = require("electron");
-//
-// Expose protected methods that allow the renderer process to use
-// the ipcRenderer without exposing the entire object
+
 contextBridge.exposeInMainWorld("api", {
     openFile: () => ipcRenderer.invoke('openFiledial'),  //open dialog file
     send: (channel, data) => {  //render to main activate fnc in main with data from face
@@ -51,12 +49,12 @@ contextBridge.exposeInMainWorld("api", {
     receive_cmd: (channel, func) => {//main to render and face listen for it if it is important for it seted for walue and stay on it
         /*
             function:
-                "fromMainhowHideSwitch" - switch betwen windows
+                "fromMainhowSave" - save file
                 "fromMainRequestLog" - requested data -log from transfer
                 "fromMainUpdateMessage" - message about version of app
         */
         // whitelist channels
-        let validChannels = ["fromMainhowHideSwitch", "fromMainRequestLog", "fromMainUpdateMessage"];
+        let validChannels = ["fromMainhowSave", "fromMainRequestLog", "fromMainUpdateMessage"];
         console.log("%c  -" + channel + " recieve_cmd", 'color:green')  //transfer log
         if (validChannels.includes(channel)) {
             ipcRenderer.on(channel, (event, ...args) => func(...args));
