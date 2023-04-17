@@ -11,24 +11,116 @@
   <body>
     <div class="sidebarr">
       <a class="closebtn" id="openNav">&#9776;</a>
-      <a href="index.html" id="s0" class="swapPage"> D </a>
+      <a href="index.html" id="s0" class="swapPage"> <img id="icons" src="pics/Downlioad.png" alt=""> </a>
       <hr>
-      <a href="manual.html" id="s0" class="swapPage"> M </a>
+      <a href="manual.html" id="s0" class="swapPage"> <img id="icons" src="pics/Manual.png" alt=""> </a>
     </div>
   
     <div id="mySidenav" class="sidenav">
       <a class="closebtn" id="closebtn">&times;</a>
-      <a href="index.html" id="s0" class="swapPage"> Download </a>
+      <a href="index.html" id="s0" class="swapPage"> <img id="icons" src="pics/Downlioad.png" alt=""> Download </a>
       <hr>
-      <a href="manual.html" id="s0" class="swapPage"> Manual </a>
+      <a href="manual.html" id="s0" class="swapPage"> <img id="icons" src="pics/Manual.png" alt=""> Manual </a>
     </div>
-    <div>
-      
-    </div>
+    
+
     <div id="kk">
       <img src="pics/linux.png" alt="">
       <h1>Manual</h1>
+      <hr>
+      <h2>Login form:</h2>
+      <p>Login form for conect to server. </p>
+      <div class="image-container">
+        <img src="pics/login.png" alt=""><br>
+      </div>
+      <ol>
+        <li>Fill your name which you sett on server.</li>
+        <li>Fill your password which you sett on server.</li>
+        <li>If your server is not on your pc. You should fill address of server where app is runing otherwise leave it empty.</li>
+        <li>After filling form click on this button you will be logged in. If there is an error check if server is running and you can try to ping on it.</li>
+        <li>If you click on this button you will see tab titles. Like on next picture. 
+          <div class="image-container">
+            <img src="pics/loginSide.png" id="sideBarre" alt=""><br>
+          </div>
+        </li>
+        <li>There you can see number of version you are using.</li>
+      </ol>
+      <hr>
+      <h2>Task handle:</h2>
+      <p>Table with tested servers. </p>
+      <div class="image-container"><img src="pics/dataUp.png" alt=""></div>
+      <ol>
+        <li>Adding button after click will open form (Adding or updating).</li>
+        <li>You can find server from table by name.</li>
+        <li>Updating row after click it will open form (Adding or updating) with predefined walues from line .</li>
+        <li>Status of task if there is this <img src="pics/prog/Start.png" id="icons" alt=""> it is not runing. If there is this <img src="pics/prog/Pause.png" id="icons" alt=""> it is runing. After click on these symbols it wil togle status.</li>
+        <li>Thissymbo <img src="pics/prog/Show.png" id="icons" alt=""> means values are in table visible. This symbol <img src="pics/prog/Hide.png" id="icons" alt=""> means datas are hiden in graphs. If you click on these symbols it will togle visibility.</li>
+        <li>Trash can after click you will remove this testing and data from server.</li>
+        <li>This row is clickable. You can click on ID, Name, Address, Period, Status and graph visible. and table wil be sorted by this colum.</li>
+      </ol>
+      <p> Adding or updating form. Where you can fill all inputs. Address of server is url or IP address. period could be in mins or hours or seconds in format (Xs or Xm or Xh)</p>
+      <div class="image-container"><img src="pics/add.png" alt=""></div>
+      
+      <hr>
+      <h2>Line graph:</h2>
+      <p>Graph with responses in time. </p>
+      <div class="image-container">
+        <img src="pics/line chart.png" alt=""><br>
+      </div>
+      <ol>
+        <li>If you click this button app will reload all data. And if auto load is turned on app will append new measured data in graph.</li>
+        <li>This button will download data in interval and with step like dys, years...</li>
+        <li>Settings button: it will open thiswindow:
+          <div class="image-container"><img src="pics/linechartsett.png" id="sideBarre" alt=""></div></li>
+        </li>
+        <ol>
+          <li>There you can set auto reload time.</li>
+          <li>This checkbox defines autoreload. If checked autoreload is on if not counter is off.</li>
+          <li>Graph area length mean how many values will be visible in graph.</li>
+        </ol>
+       <li>Set starting time if you leave it empty there will not be minimal time it will load all data without down limit.</li>
+       <li>Set ending time if you leave it empty there will not be maximal time it will load all data without upper limit.</li>
+       <li>There is list of rounding values you can round measurement in Years, Months, Days, Hours, Minutes or Seconds.</li>
+       <li>If you zoom in you can move graph to left whit this button.</li>
+       <li>Reset zoom.</li>
+       <li>If you zoom in you can move graph to right whit this button.</li>
+       <li>If you click on name of server it will togle visibility in graph.</li>
+      </ol>
+      <hr>
+      <h2>Horizontal bar chart:</h2>
+      <p>Graph with count of successful or failed conections. </p>
+      <div class="image-container">
+        <img src="pics/barchart.png" alt=""><br>
+      </div>
+      <ol>
+        <li>If you click on name of server it will togle visibility in graph.</li>
+      </ol>
+      <hr>
+      <h2>Responses pie and donut chart:</h2>
+      <p>Pie chart show average values. Donut chart is from measured values for each tested server. </p>
+      <div class="image-container">
+        <img src="pics/piechart.png" alt=""><br>
+      </div>
+      <ol>
+        <li>Pie chart with average times.</li>
+        <li>Donut chart with count of tests.</li>
+        <li>If you click on name of server it will togle visibility in graph.</li>
+      </ol>
+      <hr>
+      <h2>Map:</h2>
+      <div class="image-container">
+        <img src="pics/Map.png" alt=""><br>
+      </div>
+      <ol>
+        <li>With this buttons you can zoom in or zoom out.</li>
+        <li>After click on buble you will see name of tested server.
+          <div class="image-container"><img src="pics/buble.png" id="sideBarre" alt=""><br></div>
+        </li>
+      </ol>
+      <br>
+      
     </div>
+    
 
     <script src="./renderer.js"></script>
   </body>

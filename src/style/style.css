@@ -521,3 +521,46 @@ th{cursor: pointer;}
     border-radius: 20px;
   }
 
+
+
+
+  #kk {
+    margin-left: 60px;
+    text-align: left;
+  }
+
+
+  .dow {
+    width: 300px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    height: 300px;
+    border: 5px solid #000000;;
+  }
+
+  #sideBarre {
+    height: 200px;
+  }
+
+  #icons{
+    height: 20px;
+  }

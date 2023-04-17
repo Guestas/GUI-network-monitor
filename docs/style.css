@@ -79,17 +79,6 @@
     z-index: 1;
   }
 
-
-  #hider {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 50px;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-    height: 100%;
-  }
   
   .sidebarr a:hover {
     color: #7f7e7e;
@@ -136,7 +125,6 @@
 
   img{
     height: 60px;
-    
   }
   #kk {
     margin-left: 60px;
@@ -164,4 +152,22 @@
     cursor: pointer;
     outline: none;
     transition: 0.3s;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    height: 300px;
+    border: 5px solid #000000;;
+  }
+
+  #sideBarre {
+    height: 200px;
+  }
+
+  #icons{
+    height: 20px;
   }
