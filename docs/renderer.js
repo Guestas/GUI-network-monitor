@@ -17,7 +17,8 @@ document.querySelectorAll('.swapPage').forEach(item => {
     document.getElementById("mySidenav").style.width = "0px";
   });
 });
-
+/*
 setInterval(function(){
   location.reload();
 }, 15000);
+*/
