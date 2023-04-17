@@ -21,7 +21,7 @@ const graph2 = document.getElementById('gResp')
 const spacer = document.getElementById('spacer')
 const manua = document.getElementById('manua')
 
-const windows = [login, jsonpar, graph0, graph1, graph2, maps, spacer, graph, manua]  //div sectors by id
+const windows = [login, jsonpar, graph0, graph1, graph2, maps, manua, spacer, graph]  //div sectors by id
 var prevCh = 0
 function swapPage(sh){
 
@@ -33,9 +33,9 @@ function swapPage(sh){
     windows[i].style.display = "none";
   }
   windows[sh].style.display = "block";
-  if (sh!=0 && sh!=1 && sh!=5 && sh!=8)
+  if (sh!=0 && sh!=1 && sh!=5 && sh!=6)
   {
-    windows[7].style.display = "block";
+    windows[8].style.display = "block";
   }
   const dp = document.querySelectorAll('.swapPage')[prevCh];
   dp.style.backgroundColor = ""
