@@ -523,6 +523,38 @@ autoUpdater.on('update-downloaded', (info) => {
     }
   });
 });
+/*
+ll =
+[
+  [
+      "09:48:24"
+  ],
+  [
+      "09:48:25"
+  ],
+  [
+      "09:48:24"
+  ],
+  [
+      "09:48:25"
+  ],
+  [
+      "09:48:24"
+  ],
+]
+var bb = []
 
 
+const resultIndex = ll.findIndex(subArr => subArr.every((value, index) => value === ["09:48:28"][index]));
 
+console.log("asdfsd",resultIndex); // Output: 1
+
+const subArray = ["09:48:25"];
+const index = ll.indexOf(subArray);
+console.log(index); // this will output the index of the subArray within ll array
+
+ll.forEach(element => {
+  console.log(bb.indexOf(element[0]))
+  bb.push(element)
+  console.log(element)
+});*/

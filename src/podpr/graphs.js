@@ -8,7 +8,10 @@ window.api.receive("fromMainServerDown", (data) => {
 });
 
 function loadAllDataNew(){
-  dataForGraphsT(undefined, undefined, "s", true, true)
+  const DaysAgo = new Date();
+  timestapm1dayago = DaysAgo.setDate(DaysAgo.getDate() - 1);
+  console.log(timestapm1dayago, Date.now())
+  dataForGraphsT(timestapm1dayago, undefined, "s", true, true)
 }
 
 
@@ -149,7 +152,7 @@ var myChart = new Chart(Lchart, configL);
 const load_d = document.getElementById('load_d') 
 load_d.addEventListener('click', async () => {
   myCheckbox.checked=true
-  dataForGraphsT(undefined, undefined, "s", true, true)
+  loadAllDataNew()
 })
 
 const resZ = document.getElementById('resetZoom')
@@ -360,7 +363,9 @@ function loadTableData(){
     input2.value = lenLimit
     
     myCheckbox.checked=true
-    dataForGraphsT(undefined, undefined, "s", true, true)
+
+    
+    loadAllDataNew()
     if (!initAutoReload){
       autoReload()
       initAutoReload = true;
@@ -483,8 +488,6 @@ function timeConvT(time, roundingUnit){
   return returnedTime
 }
 
-const twoDaysAgo = new Date();
-timestapm2dayago = twoDaysAgo.setDate(twoDaysAgo.getDate() - 1);
 var statusBar = document.getElementById("progress");
 function progress(progressStatus){
   document.getElementById("myBar").style.width = progressStatus + "%";
@@ -543,15 +546,19 @@ function dataForGraphsT(dtf = 0, dtt=Date.now(), step = "s", firsLoad = true, au
           //kl = chartData.findIndex(function(item, i){return item.address == da.address})
             lastLoadedTime = da.time
             var time = timeConvT(da.time, step)//YMDhms
+            
+            
 
             var newLabel = true
             if (time.YMD != tprev.YMD) {
-              //console.log([time.hms, time.YMD])
               labels.push([time.hms, time.YMD])
             }
             else if (time.hms != tprev.hms) {
-              //console.log([time.hms])
               labels.push([time.hms])
+              
+              //const resultIndex = labels.findIndex(subArr => subArr.every((value, index) => value === [time.hms][index]));
+              //if (resultIndex != -1) console.log(resultIndex); // Output: 1}
+              
             }
             else {
               //console.log("aaaaaaa")
@@ -595,7 +602,7 @@ function dataForGraphsT(dtf = 0, dtt=Date.now(), step = "s", firsLoad = true, au
             }
             progress(stts+=stepts)
         });
-
+        console.log(labels.length, labels)
         chartData.forEach(element => {
           //console.log(sumNumbersT(element.dataMed), i++, labels[labels.length-1], element.address)
           element.data.push(sumNumbersT(element.dataMed))
