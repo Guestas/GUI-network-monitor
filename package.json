@@ -1,6 +1,6 @@
 {
   "name": "Network-monitor",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "GUI for api app",
   "main": "src/main.js",
   "scripts": {
