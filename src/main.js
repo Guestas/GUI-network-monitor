@@ -5,7 +5,7 @@ const axios = require('axios').default;
 const https = require('https');
 const { autoUpdater, AppUpdater } = require("electron-updater");
 
-var dev = true//dev if true open dev mode and auto fill forms
+var dev = false//dev if true open dev mode and auto fill forms
 let mainWindow
 
 var httpReqestAddr
