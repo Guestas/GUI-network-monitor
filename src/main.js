@@ -493,6 +493,7 @@ if (process.platform === 'darwin') {
 
 // Zobrazí dialog s informací o aktualizaci
 autoUpdater.on('update-available', (info) => {
+  const isMac = process.platform === 'darwin'
   dialog.showMessageBox({
     type: 'info',
     title: 'Update available',

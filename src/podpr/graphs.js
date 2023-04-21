@@ -9,7 +9,7 @@ window.api.receive("fromMainServerDown", (data) => {
 
 function loadAllDataNew(){
   const DaysAgo = new Date();
-  timestapm1dayago = DaysAgo.setDate(DaysAgo.getDate() - 3);
+  timestapm1dayago = DaysAgo.setDate(DaysAgo.getDate() - 1);
   console.log(timestapm1dayago, Date.now())
   dataForGraphsT(timestapm1dayago, undefined, "s", true, true)
 }
