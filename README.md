@@ -29,3 +29,11 @@ npm run distWA
 npm run distL
 
 ```
+
+
+
+like devDependencies:
+    npm install electron --save-dev
+
+
+
